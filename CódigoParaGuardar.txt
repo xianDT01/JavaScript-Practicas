@@ -1,0 +1,10 @@
+
+		alert("Bien benido");
+		var contraseña;
+		var nome = prompt("Pon o tou nome");
+		var apelido = prompt("Pon o teu apelido");
+		var contraseña = prompt("Escribe la contraseña");
+		while (contraseña !== "888") {
+			contraseña = prompt("Contraseña incorrecta. Intente novamente:");
+		}
+		console.log("¡Contraseña correcta!.");
