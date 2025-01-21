@@ -1,35 +1,33 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-<meta charset="UTF-8">
-<title>Hola Alumnos</title>
-<link href="css/micss.css" rel="stylesheet">
-<script>
-    // Manda unha ventana poñendo o texto que que queiras 
-    alert("Bienvenido");
-    var prueba = prompt("Introduce algo");
-    // Pon texto no body do html
-    document.write("pruebas de escritura");
-    var precio, cantidad, total;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola Alumnos</title>
+    <link rel="stylesheet" href="css/micss.css">
+    <script>
+        // Muestra una ventana de alerta con el mensaje de bienvenida
+        alert("Bienvenido");
 
-    precio = 5;
-    cantidad = 5;
+        // Solicita al usuario que introduzca algo
+        var prueba = prompt("Introduce algo");
 
-    total = precio * cantidad;
- //   alert (total);
-     var articulos= new articulos["camiseta", "pantalon", "camisa"];
+        // Escribe un mensaje en el documento
+        document.write("Pruebas de escritura<br>");
 
-    document.write("Estos son los articulos");
-        
-</script>
+        // Calcula el total de precio por cantidad
+        var precio = 5;
+        var cantidad = 5;
+        var total = precio * cantidad;
+        // alert(total);
 
+        // Define un array de artículos
+        var articulos = ["camiseta", "pantalon", "camisa"];
+        document.write("Estos son los artículos: " + articulos.join(", "));
+    </script>
 </head>
 <body>
-
-<h1>Hola alumnoss
-</h1>
-<p>Bienvenidos al curso de JavaScript de <span>Píldoras Informáticas</span></p>
-<img src="imgs/arbol.jpg" width="35%">
-
+    <p>Bienvenidos a la página<span></span></p>
+    <img src="imgs/arbol.jpg" alt="Imagen de un árbol" width="35%">
 </body>
 </html>
