@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejemplo Sencillo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #message {
+      font-size: 1.5em;
+      color: blue;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Probas en JavaScript!</h1>
+  <p id="message">Presiona o botón para cambiar o texto.</p>
+  <button onclick="changeMessage()">Presióname</button>
+
+  <script>
+    function changeMessage() {
+      const messageElement = document.getElementById('message');
+      messageElement.textContent = '¡O texto cambiou!';
+    }
+  </script>
+</body>
+</html>
