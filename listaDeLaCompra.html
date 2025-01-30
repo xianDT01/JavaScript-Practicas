@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+</head>
+<body>
+
+    <h2>Lista de Tareas</h2>
+    <input type="text" id="tareaInput" placeholder="Añadir tarea">
+    <button onclick="añadirTarea()">Añadir</button>
+
+    <ul id="listaTareas"></ul>
+
+    <script>
+        function añadirTarea() {
+            let input = document.getElementById('tareaInput');
+            let tarea = input.value;
+            if (tarea.trim() !== "") {
+                let lista = document.getElementById('listaTareas');
+                let li = document.createElement('li');
+                li.textContent = tarea;
+                lista.appendChild(li);
+                input.value = ""; // Limpa o campo
+            }
+        }
+    </script>
+
+</body>
+</html>
