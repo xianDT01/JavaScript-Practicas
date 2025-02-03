@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+</head>
+<body>
+
+    <h2>Contador</h2>
+    <p id="contador">0</p>
+    <button onclick="incrementar()">Aumentar</button>
+    <button onclick="decrementar()">Disminuir</button>
+
+    <script>
+        let numero = 0;
+
+        function incrementar() {
+            numero++;
+            document.getElementById('contador').textContent = numero;
+        }
+
+        function decrementar() {
+            numero--;
+            document.getElementById('contador').textContent = numero;
+        }
+    </script>
+
+</body>
+</html>
