@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mostrar Mensaje</title>
+</head>
+<body>
+
+    <h2>Haz clic para ver el mensaje</h2>
+    <button onclick="mostrarMensaje()">Mostrar</button>
+    <p id="mensaje" style="display: none;"> Mensaje oculto.</p>
+
+    <script>
+        function mostrarMensaje() {
+            let mensaje = document.getElementById('mensaje');
+            mensaje.style.display = "block"; // Mostra a mensaxe
+        }
+    </script>
+
+</body>
+</html>
