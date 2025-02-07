@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Aleatorios</title>
+</head>
+<body>
+
+    <h2>Aleatorios</h2>
+    <button onclick="tirarDado()">Lanzar</button>
+    <p id="resultado">Resultado: </p>
+
+    <script>
+        function tirarDado() {
+            let numero = Math.floor(Math.random() * 6) + 1; 
+            document.getElementById('resultado').textContent = "Resultado: " + numero;
+        }
+    </script>
+
+</body>
+</html>
