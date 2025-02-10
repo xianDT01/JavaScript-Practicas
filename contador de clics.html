@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de Clics</title>
+</head>
+<body>
+
+    <h2>Contador de Clics</h2>
+    <p>Clics: <span id="contador">0</span></p>
+    <button onclick="incrementar()">¡FAi clic!</button>
+
+    <script>
+        let contador = 0;
+
+        function incrementar() {
+            contador++;
+            document.getElementById('contador').textContent = contador;
+        }
+    </script>
+
+</body>
+</html>
