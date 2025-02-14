@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa que cambia de cor</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+        }
+
+        .caja {
+            width: 150px;
+            height: 150px;
+            background-color: #3498db;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="caja" onclick="cambiarColor()">¡Fai clic!</div>
+
+    <script>
+        function cambiarColor() {
+            const colores = ["#e74c3c", "#2ecc71", "#f39c12", "#9b59b6", "#1abc9c"];
+            let caja = document.querySelector(".caja");
+            let colorAleatorio = colores[Math.floor(Math.random() * colores.length)];
+            caja.style.backgroundColor = colorAleatorio;
+        }
+    </script>
+
+</body>
+</html>
