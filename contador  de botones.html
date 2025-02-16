@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
+        }
+
+        #contador {
+            font-size: 40px;
+            margin: 20px;
+            font-weight: bold;
+        }
+
+        button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #2ecc71;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Contador</h2>
+    <p id="contador">0</p>
+    <button onclick="incrementar()">➕ Aumentar</button>
+    <button onclick="disminuir()">➖ Disminuir</button>
+
+    <script>
+        let contador = 0;
+
+        function incrementar() {
+            contador++;
+            actualizarContador();
+        }
+
+        function disminuir() {
+            contador--;
+            actualizarContador();
+        }
+
+        function actualizarContador() {
+            document.getElementById("contador").textContent = contador;
+        }
+    </script>
+
+</body>
+</html>
