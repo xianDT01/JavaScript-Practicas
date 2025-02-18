@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar a Cor de Fondo</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background 0.3s ease;
+            font-family: Arial, sans-serif;
+        }
+
+        input[type="range"] {
+            width: 300px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Move o slider para cambiar a cor de fondo</h2>
+    <input type="range" id="colorSlider" min="0" max="360" value="180">
+
+    <script>
+        let slider = document.getElementById("colorSlider");
+
+        slider.addEventListener("input", function() {
+            let color = `hsl(${slider.value}, 80%, 60%)`; 
+            document.body.style.background = color;
+        });
+    </script>
+
+</body>
+</html>
