@@ -1,29 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador</title>
+    <title>Contador Mejorado</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            padding: 50px;
+        }
+        main {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: inline-block;
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        button {
+            font-size: 1rem;
+            padding: 10px 15px;
+            margin: 5px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button#aumentar {
+            background-color: #28a745;
+            color: white;
+        }
+        button#disminuir {
+            background-color: #dc3545;
+            color: white;
+        }
+        button:hover {
+            opacity: 0.8;
+        }
+    </style>
 </head>
 <body>
 
-    <h2>Contador</h2>
-    <p id="contador">0</p>
-    <button onclick="incrementar()">Aumentar</button>
-    <button onclick="decrementar()">Disminuir</button>
+    <main>
+        <h2>Contador</h2>
+        <p id="contador">0</p>
+        <button id="aumentar">Aumentar</button>
+        <button id="disminuir">Disminuir</button>
+    </main>
 
     <script>
         let numero = 0;
+        const contador = document.getElementById('contador');
+        const btnAumentar = document.getElementById('aumentar');
+        const btnDisminuir = document.getElementById('disminuir');
 
-        function incrementar() {
+        btnAumentar.addEventListener('click', () => {
             numero++;
-            document.getElementById('contador').textContent = numero;
-        }
+            actualizarContador();
+        });
 
-        function decrementar() {
-            numero--;
-            document.getElementById('contador').textContent = numero;
+        btnDisminuir.addEventListener('click', () => {
+            if (numero > 0) { 
+                numero--;
+                actualizarContador();
+            }
+        });
+
+        function actualizarContador() {
+            contador.textContent = numero;
         }
     </script>
 
