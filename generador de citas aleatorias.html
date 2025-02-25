@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Citas Aleatorias</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #quote {
+      font-size: 1.5em;
+      color: #333;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Generador de Citas Aleatorias</h1>
+  <p id="quote">Haz clic en el botón para ver una cita inspiradora.</p>
+  <button onclick="generateQuote()">Generar Cita</button>
+
+  <script>
+    const quotes = [
+      "La vida es 10% lo que nos sucede y 90% cómo reaccionamos a ello.",
+      "El único modo de hacer un gran trabajo es amar lo que haces.",
+      "No cuentes los días, haz que los días cuenten.",
+      "La mejor manera de predecir el futuro es inventarlo.",
+      "Tu tiempo es limitado, no lo desperdicies viviendo la vida de otra persona."
+    ];
+
+    function generateQuote() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      const quoteElement = document.getElementById('quote');
+      quoteElement.textContent = quotes[randomIndex];
+    }
+  </script>
+</body>
+</html>
