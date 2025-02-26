@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Validación de Formulario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 1em;
+    }
+    #warning {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Formulario de Suscripción</h1>
+  <form id="subscriptionForm">
+    <input type="text" id="email" placeholder="Introduce tu correo electrónico">
+    <br>
+    <button type="submit">Suscribirse</button>
+  </form>
+  <p id="warning" style="display: none;">Por favor, introduce un correo electrónico válido.</p>
+
+  <script>
+    document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Evita el envío del formulario
+      const emailInput = document.getElementById('email');
+      const warningMessage = document.getElementById('warning');
+      if (emailInput.value.trim() === '') {
+        warningMessage.style.display = 'block';
+      } else {
+        warningMessage.style.display = 'none';
+        alert('¡Gracias por suscribirte!');
+        // Aquí puedes agregar el código para enviar el formulario
+      }
+    });
+  </script>
+</body>
+</html>
