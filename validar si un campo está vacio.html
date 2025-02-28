@@ -32,7 +32,7 @@
 
   <script>
     document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
-      event.preventDefault(); // Evita el envío del formulario
+      event.preventDefault(); 
       const emailInput = document.getElementById('email');
       const warningMessage = document.getElementById('warning');
       if (emailInput.value.trim() === '') {
@@ -40,7 +40,6 @@
       } else {
         warningMessage.style.display = 'none';
         alert('¡Gracias por suscribirte!');
-        // Aquí puedes agregar el código para enviar el formulario
       }
     });
   </script>

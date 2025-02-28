@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cambiar Color de Fondo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+      transition: background-color 0.5s;
+    }
+    input, button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cambia el Color de Fondo</h1>
+  <input type="text" id="colorInput" placeholder="Escribe un color (ej: blue, en ingles)">
+  <button onclick="changeColor()">Cambiar Color</button>
+  <button onclick="randomColor()">Random</button>
+
+  <script>
+    function changeColor() {
+      const color = document.getElementById("colorInput").value.toLowerCase();
+      document.body.style.backgroundColor = color;
+    }
+
+    function randomColor() {
+      const letters = "0123456789ABCDEF";
+      let color = "#";
+      for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random() * 16)];
+      }
+      document.body.style.backgroundColor = color;
+    }
+  </script>
+</body>
+</html>
