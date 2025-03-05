@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Adivina el Número</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 1.2em;
+    }
+    #message {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Adivina el Número</h1>
+  <p>Introduce un número entre 1 y 100:</p>
+  <input type="number" id="guessInput" min="1" max="100">
+  <button onclick="checkGuess()">Probar</button>
+  <p id="message"></p>
+
+  <script>
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    function checkGuess() {
+      const guess = parseInt(document.getElementById("guessInput").value);
+      const message = document.getElementById("message");
+      attempts++;
+
+      if (isNaN(guess) || guess < 1 || guess > 100) {
+        message.textContent = "❌ Ingresa un número válido entre 1 y 100.";
+        return;
+      }
+
+      if (guess === secretNumber) {
+        message.textContent = `🎉 ¡Felicidades! Adivinaste el número en ${attempts} intentos.`;
+      } else if (guess < secretNumber) {
+        message.textContent = "⬆️ Intenta con un número más alto.";
+      } else {
+        message.textContent = "⬇️ Intenta con un número más bajo.";
+      }
+    }
+  </script>
+</body>
+</html>
