@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación de Xián</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+        }
+        .nombre {
+            font-size: 60px;
+            font-weight: bold;
+            cursor: pointer;
+            border-right: 4px solid white;
+            white-space: nowrap;
+            overflow: hidden;
+            width: 0;
+            animation: escribir 2s steps(10) forwards;
+        }
+        @keyframes escribir {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        .nombre:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+            transition: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="nombre" id="nombre">Xián</div>
+
+    <script>
+        document.getElementById("nombre").addEventListener("click", function() {
+            this.style.transform = "translateY(-10px)";
+            setTimeout(() => { this.style.transform = "translateY(0px)"; }, 200);
+        });
+    </script>
+</body>
+</html>
