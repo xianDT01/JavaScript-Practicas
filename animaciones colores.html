@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de animación</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            transition: transform 1s ease-in-out, background-color 1s ease-in-out;
+        }
+        .box.animating {
+            transform: translateX(200px) translateY(200px);
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="cuadro"></div>
+
+    <script>
+        const cuadro = document.getElementById("cuadro");
+
+        cuadro.addEventListener("click", () => {
+            // Añadimos o quitamos la clase para alternar la animación
+            cuadro.classList.toggle("animating");
+        });
+    </script>
+</body>
+</html>
